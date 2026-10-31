@@ -1,0 +1,10 @@
+id = "faxforagents-mcp-server"
+name = "Fax for Agents MCP Server"
+description = "Send and receive faxes from Zed's agent through Fax for Agents: quotes, human approvals, delivery evidence and the inbox"
+version = "0.1.0"
+schema_version = 1
+authors = ["Fax for Agents <hello@faxforagents.com>"]
+repository = "https://github.com/faxforagents/zed-extension"
+
+[context_servers.faxforagents-mcp-server]
+name = "Fax for Agents MCP Server"

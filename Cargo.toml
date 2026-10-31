@@ -1,0 +1,17 @@
+[package]
+name = "faxforagents_mcp_server"
+version = "0.1.0"
+edition = "2021"
+publish = false
+license = "MIT"
+description = "Zed extension that runs the faxforagents-mcp context server"
+repository = "https://github.com/faxforagents/zed-extension"
+
+[lib]
+path = "src/faxforagents_mcp_server.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+serde = "1.0"
+schemars = "0.8"
+zed_extension_api = "0.7.0"

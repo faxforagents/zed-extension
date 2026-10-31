@@ -1,0 +1,5 @@
+{
+  /// Your Fax for Agents API key from https://app.faxforagents.com.
+  /// ffa_test_... uses the sandbox at no cost. ffa_live_... reaches the carrier.
+  "api_key": "ffa_test_..."
+}

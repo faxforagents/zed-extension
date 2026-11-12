@@ -21,7 +21,7 @@
 <p align="center">
   <a href="https://github.com/faxforagents/zed-extension/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/faxforagents/zed-extension/ci.yml?branch=main&label=ci" alt="CI"></a>
   <a href="https://github.com/faxforagents/zed-extension/blob/main/LICENSE"><img src="https://img.shields.io/badge/licence-MIT-1f6feb" alt="MIT licence"></a>
-  <a href="https://faxforagents.com/mcp/"><img src="https://img.shields.io/badge/MCP-15%20tools-6b4fbb" alt="MCP"></a>
+  <a href="https://faxforagents.com/mcp/"><img src="https://img.shields.io/badge/MCP-17%20tools-6b4fbb" alt="MCP"></a>
 </p>
 
 Fax for Agents is a fax API, a hosted MCP server and SDKs built so AI agents can send and receive
@@ -75,13 +75,15 @@ every other tool answers `ok=false, error_code=invalid_token` with the way to ge
 | `get_guide` | The manual, whole or by section. Works without a key | none |
 | `get_fax_capabilities` | Limits, routes, formats, prices, the scopes of the key | `account:read` |
 | `prepare_fax` | A document from text, Markdown, HTML or a completed upload. Never sends | `document:write` |
-| `get_document` | One prepared document by id: page count, sha256, warnings, previews | `document:read` |
+| `get_fax_document` | One prepared document by id: page count, sha256, warnings, previews | `document:read` |
 | `quote_fax` | The exact price of one document to one destination, with the policy verdict | `fax:quote` |
 | `send_approved_fax` | Queue a quoted fax. Answers queued, never delivered | `fax:send` |
 | `get_fax_status` | State and attempts, with the carrier's evidence once delivered or partial | `fax:read` |
 | `list_faxes` | Newest first, by state, with a cursor | `fax:read` |
 | `get_fax_balance` | Available and held balance | `billing:read` |
 | `cancel_fax` | Cancel while queued, best effort once sending | `fax:cancel` |
+| `request_card_payment` | Ask a person to pay for one quoted fax by card, with no wallet balance | `fax:send` |
+| `get_card_payment_status` | One card payment order: paid or not, what was charged, the fax it sent | `fax:read` |
 | `request_human_review` | With `quote_id`, ask a person to approve that send. Without it, ask for help | `approval:request` |
 | `get_review_status` | Where one approval or help request stands | `approval:read` |
 | `list_inbox` | Received faxes, metadata only | `inbox:read` |
